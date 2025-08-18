@@ -6,7 +6,10 @@ import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRespository;
 import hello.core.member.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService{
 
     private  final MemberRespository memberRespository ;
@@ -18,7 +21,7 @@ public class OrderServiceImpl implements OrderService{
 
     // 이렇게 하면 , 의존 관계는 추상화 까지만 의존하지만 실제 구현 객체가 없어 널 포인터 오류가 발생한다.
 
-
+@Autowired
     public OrderServiceImpl(MemberRespository memberRespository, DiscountPolicy discountPolicy) {
         this.memberRespository = memberRespository;
         this.discountPolicy = discountPolicy;
