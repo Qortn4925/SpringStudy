@@ -25,7 +25,7 @@ public class OrderServiceImpl implements OrderService{
 
     // 롬복으로 인해 제거
 @Autowired
-    public OrderServiceImpl(MemberRespository memberRespository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRespository memberRespository, @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy) {
         this.memberRespository = memberRespository;
         this.discountPolicy = discountPolicy;
     }
