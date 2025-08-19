@@ -8,6 +8,7 @@ import hello.core.member.MemberRespository;
 import hello.core.member.MemoryMemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -15,8 +16,6 @@ public class OrderServiceImpl implements OrderService{
 
     private  final MemberRespository memberRespository ;
     private   final  DiscountPolicy discountPolicy;
-
-
 
     //    private final DiscountPolicy discountPolicy =new FixDiscountPolicy();
     // 할인 정책 변화로 인해 클래스 변경
