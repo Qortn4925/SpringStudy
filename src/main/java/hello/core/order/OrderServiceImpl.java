@@ -13,9 +13,11 @@ import org.springframework.stereotype.Component;
 public class OrderServiceImpl implements OrderService{
 
     private  final MemberRespository memberRespository ;
-    private  final DiscountPolicy discountPolicy;
+    private   final  DiscountPolicy discountPolicy;
 
-//    private final DiscountPolicy discountPolicy =new FixDiscountPolicy();
+
+
+    //    private final DiscountPolicy discountPolicy =new FixDiscountPolicy();
     // 할인 정책 변화로 인해 클래스 변경
 //    private final DiscountPolicy discountPolicy =new RateDiscountPolicy();
 

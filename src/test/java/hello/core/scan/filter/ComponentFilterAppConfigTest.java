@@ -14,7 +14,7 @@ public class ComponentFilterAppConfigTest {
 
     @Test
     void filterScan() {
-        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(ComponentFilterAppConfigTest.class);
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(ComponentFilterAppConfig.class);
 
         BeanA beanA = ac.getBean("beanA", BeanA.class);
         assertThat(beanA).isNotNull();
