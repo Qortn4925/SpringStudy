@@ -31,6 +31,7 @@ public class SingletonTest {
 
     @Scope("singleton")
     static class SingletonBean {
+
         @PostConstruct
         public void init() {
             System.out.println("SingletonBean.init");
